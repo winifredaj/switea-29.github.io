@@ -1,0 +1,220 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  transition: 0.7s;
+}
+
+#container {
+  background: #fff;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: 0.7s;
+}
+
+.inactive {
+  background: #fff;
+}
+
+#container.active {
+  background: rgb(17, 16, 16);
+  background-image: url(switea-collage.png);
+  background-size: contain;
+}
+
+#container.dark {
+  background: rgb(17, 16, 16) !important;
+}
+
+body.inactive {
+  background: #fff;
+}
+
+body.active {
+  background: rgb(17, 16, 16);
+}
+
+.card {
+  background: #f9c3db;
+  position: absolute;
+  top: 20%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  filter: opacity(0.7);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  width: 800px;
+  height: 500px;
+  transition: 0.55s;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+#card-2 {
+  filter: opacity(1);
+  background: rgb(238, 160, 202);
+  color: #cf4c87;
+}
+
+@keyframes example {
+  0% {
+    background-color: #e9c4d7;
+    top: 20%;
+    left: 0%;
+  }
+  25% {
+    background-color: #ffe9ad;
+    left: 10%;
+    top: 0%;
+  }
+
+  50% {
+    background-color: #b9cea1;
+    left: 50%;
+    top: 0%;
+  }
+
+  75% {
+    background-color: #7b9ca3;
+    left: 50%;
+    top: 50%;
+  }
+
+  100% {
+    background-color: #8877a6;
+    left: 20%;
+    top: 50%;
+  }
+}
+
+.front {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #320000;
+  font-weight: 600;
+}
+
+.message {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 40px;
+}
+
+.btn {
+  background: #fff;
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+#button {
+  z-index: 5000;
+  position: absolute;
+  bottom: 20%;
+}
+
+#button-two {
+  color: #320000;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#button,
+#button-two:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
+}
+
+#card-1.active {
+  transform: rotateY(90deg);
+}
+
+#card-1.inactive {
+  transform: rotateY(0deg);
+}
+
+#card-2.active {
+  transform: rotateY(90deg);
+}
+
+#card-2.inactive {
+  transform: rotateY(0deg);
+}
+
+#toggler {
+  background: rgb(225, 72, 105);
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px inset rgb(255, 255, 255), 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  left: -1px;
+  bottom: -5px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#switch.inactive {
+  left: -1px;
+  bottom: -5px;
+}
+
+#switch.active {
+  left: 60px;
+}
+
+#toggler.inactive {
+  background: rgb(225, 72, 105);
+}
+
+#toggler.active {
+  background: rgb(231, 166, 180);
+}
+
+.hidden {
+  display: none;
+}
+
+.video {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
